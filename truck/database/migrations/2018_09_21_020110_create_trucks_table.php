@@ -25,7 +25,7 @@ class CreateTrucksTable extends Migration
             $table->integer('status')->unsigned();
             $table->integer('price_km')->unsigned();
             $table->integer('price_h')->unsigned();
-            $table->integer('supplier_id')->nullable();
+            $table->integer('supplier_id')->unsigned()->nullable();
             $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('cascade');
             $table->timestamps();
         });

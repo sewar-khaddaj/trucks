@@ -284,3 +284,5 @@
     <!-- ============================================================== -->
     <script src="/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<!-- <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script> -->
