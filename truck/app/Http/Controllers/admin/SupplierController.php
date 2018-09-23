@@ -47,7 +47,7 @@ class SupplierController extends Controller
     ]);
      $supplier = new Supplier($request->all());
      $supplier->save();
-     return back()->with('success','Item hucking created !');
+     return back()->with('success','Item created successfully!');
  }
 
     /**

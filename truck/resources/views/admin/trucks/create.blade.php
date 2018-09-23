@@ -24,6 +24,11 @@
                 <textarea type="text" class="form-control form-control-line"
                 name="company_name"  > </textarea>
             </div>
+            <div class="form-group">
+                <label> Company_Phone <span class="help"> </span></label>
+                <textarea type="text" class="form-control form-control-line"
+                name="company_phone"  > </textarea>
+            </div>
 
             <div class="form-group">
                 <label> Plate_Number <span class="help"> </span></label>
@@ -56,19 +61,19 @@
                 name="price_h"  > </textarea>
             </div>
             <div class="col-md-12 ">
-                <label> Supplier_Name <span class="help"> </span></label>
-                <select name="supplier_id" class=" m-b-10">
-                    @foreach($supplier as $supplier)
-                    <option value="{{$supplier->id}}">{{$supplier->supplier}}</option>
-                    @endforeach
-                </select>
+              <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Supplier_Name </label>
+              <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                 @foreach($suppliers as $supplier)
+                 <option selected>Open this select menu</option>
+                 <option value="{{$supplier->id}}">{{$supplier->name}}</option>
+                 @endforeach
+             </select>
+         </div>
 
-            </div>
-
-            <button type="submit" class="btn btn-primary my-2">Save</button>
-            
-        </form>
-    </div>
+         <button type="submit" class="btn btn-primary my-2">Save</button>
+         
+     </form>
+ </div>
 </div>
 </div>
 @endsection('content')                

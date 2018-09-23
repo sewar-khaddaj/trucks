@@ -26,8 +26,9 @@ class TruckController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view ('admin.trucks.create');
+    {  
+        $suppliers = Supplier::all();
+        return view ('admin.trucks.create',compact('suppliers'));
     }
 
     /**
@@ -45,7 +46,7 @@ class TruckController extends Controller
         'model' =>      'required',
         'driver_phone' =>      'required',
         'location' =>      'required',
-        'status' =>      'required',
+        //'status' =>      'required',
         'price_km' =>      'required',
         'price_h' =>      'required',
         'company_phone' =>      'required',
@@ -53,9 +54,9 @@ class TruckController extends Controller
     ]);
        $truck = new Truck($request->all());
        $truck->save();
-        $supplier = $request['supplier_id'];
-        $truck->supplier()->associate($supplier);
-       return back()->with('success','Item hucking created !');
+       $supplier = $request['supplier_id'];
+       $truck->supplier()->associate($supplier);
+       return back()->with('success','Item  created successfully!');
    }
 
     /**
@@ -65,8 +66,8 @@ class TruckController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Truck $truck)
-    {
-        return view ('admin.trucks.show',compact('truck'));
+    {  $suppliers = Supplier::all();
+        return view ('admin.trucks.show',compact('truck','suppliers'));
     }
 
     /**
@@ -76,8 +77,8 @@ class TruckController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Truck $truck)
-    {
-        return view ('admin.trucks.edit',compact('truck'));
+    {   $suppliers = Supplier::all();
+        return view ('admin.trucks.edit',compact('truck','suppliers'));
     }
 
     /**
@@ -92,7 +93,7 @@ class TruckController extends Controller
         $truck->update($request->all());
         $truck->save();
 
-        return back();
+        return back()->with('success','Item  update successfully!');
     }
 
     /**

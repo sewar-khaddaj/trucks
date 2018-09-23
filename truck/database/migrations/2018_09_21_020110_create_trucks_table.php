@@ -22,7 +22,7 @@ class CreateTrucksTable extends Migration
             $table->string('model');
             $table->integer('driver_phone')->unsigned();
             $table->integer('company_phone')->unsigned();
-            $table->integer('status')->unsigned();
+            $table->integer('status')->default(0);
             $table->integer('price_km')->unsigned();
             $table->integer('price_h')->unsigned();
             $table->integer('supplier_id')->unsigned()->nullable();

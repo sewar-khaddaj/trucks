@@ -45,8 +45,12 @@ Trucks
 
 
 								<td class="text-nowrap">
+									 <a class="btn default btn-outline" title="Show More Detailes" data-placement="top" data-toggle="tooltip" href="{{ action('Admin\TruckController@show', $truck) }} "> <i class="fas fa-eye m-r-10"></i></a>
 
-									<a class="btn default btn-outline " data-delete href="javascript:void(0);"><i
+									 <a class="btn default btn-outline" title="Edit Truck" data-placement="top" data-toggle="tooltip" href="{{ action('Admin\TruckController@edit', $truck) }} "><i class="icon-pencil m-r-10"> </i></a>
+									
+
+									 <a class="btn default btn-outline " data-delete href="javascript:void(0);"><i
 										class="fa fa-trash text-danger m-r-10" data-toggle="tooltip" data-placement="top" title="Delete Truck"></i></a>
 
 										<form action="{{ action('Admin\TruckController@destroy', $truck) }}"
@@ -54,14 +58,11 @@ Trucks
 										{{ csrf_field() }}
 										{{ method_field('DELETE') }}
 
-									</form>
+									   </form>
+
 								</td>
-								<td class="text-nowrap">
-									<li><a class="btn default btn-outline" title="Edit Truck" href="{{ action('Admin\TruckController@edit', $truck) }} "><i class="fas fa-eye"></i></a></li>
-								</td>
-										<td class="text-nowrap">
-									<li><a class="btn default btn-outline" title="Show More Detailes" href="{{ action('Admin\TruckController@show', $truck) }} "><i class="icon-pencil"></i></a></li>
-								</td>
+
+
 							</tr>
 							@endforeach
 

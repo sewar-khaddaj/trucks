@@ -46,7 +46,7 @@ class UserController extends Controller
     ]);
      $user = new User($request->all());
      $user->save();
-     return back()->with('success','Item hucking created !');
+     return back()->with('success','Item created successfully !');
 
  }
 

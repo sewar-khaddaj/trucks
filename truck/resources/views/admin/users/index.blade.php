@@ -42,8 +42,9 @@ users
 								<td>{{ strip_tags($user->name) ?? 'No Title' }}</td>
 
 								<td class="text-nowrap">
+									 <a class="btn default btn-outline" title="Edit User" data-placement="top" href="{{ action('Admin\UserController@edit', $user) }} "><i class="icon-pencil"></i></a>
 
-									<a class="btn default btn-outline " data-delete href="javascript:void(0);"><i
+								    	<a class="btn default btn-outline " data-delete href="javascript:void(0);"><i
 										class="fa fa-trash text-danger m-r-10" data-toggle="tooltip" data-placement="top" title="Delete User"></i></a>
 
 										<form action="{{ action('Admin\UserController@destroy', $user) }}"
@@ -51,11 +52,10 @@ users
 										{{ csrf_field() }}
 										{{ method_field('DELETE') }}
 
-									</form>
+									 </form>
 								</td>
-								<td class="text-nowrap">
-									<li><a class="btn default btn-outline" title="Edit User" href="{{ action('Admin\UserController@edit', $user) }} "><i class="icon-pencil"></i></a></li>
-								</td>
+									
+								
 							</tr>
 							@endforeach
 

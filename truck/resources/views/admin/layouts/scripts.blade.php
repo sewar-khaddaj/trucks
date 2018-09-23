@@ -31,6 +31,7 @@
 <script src="/assets/admin/plugins/moment/moment.js"></script>
 <script src="/assets/admin/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 
+
 <script>
 
     $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
@@ -284,5 +285,9 @@
     <!-- ============================================================== -->
     <script src="/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+<script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+<script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+
 
 <!-- <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script> -->

@@ -47,7 +47,10 @@ suppliers
 
 								<td class="text-nowrap">
 
-									<a class="btn default btn-outline " data-delete href="javascript:void(0);"><i
+									  <a class="btn default btn-outline" title="Edit Supplier" data-placement="top" href="{{ action('Admin\SupplierController@edit', $supplier) }} "><i class="icon-pencil"></i></a>
+									
+
+									 <a class="btn default btn-outline " data-delete href="javascript:void(0);"><i
 										class="fa fa-trash text-danger m-r-10" data-toggle="tooltip" data-placement="top" title="Delete Supplier"></i></a>
 
 										<form action="{{ action('Admin\SupplierController@destroy', $supplier) }}"
@@ -55,11 +58,9 @@ suppliers
 										{{ csrf_field() }}
 										{{ method_field('DELETE') }}
 
-									</form>
+									  </form>
 								</td>
-								<td class="text-nowrap">
-									<li><a class="btn default btn-outline" title="Edit Supplier" href="{{ action('Admin\SupplierController@edit', $supplier) }} "><i class="icon-pencil"></i></a></li>
-								</td>
+
 							</tr>
 							@endforeach
 
